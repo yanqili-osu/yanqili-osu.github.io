@@ -147,10 +147,6 @@ details p { margin: 0.5rem 0 0; }
 .course { margin: 0 0 0.5rem; font-weight: 600; }
 .course .muted { font-weight: 400; }
 
-/* References */
-.refs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem 2rem; }
-.refs p { margin: 0; }
-.refs .name { font-weight: 600; }
 
 footer { padding: 3rem 1rem 2.5rem; color: var(--muted); font-size: 0.85rem; }
 
@@ -161,5 +157,4 @@ footer { padding: 3rem 1rem 2.5rem; color: var(--muted); font-size: 0.85rem; }
   .initials { font-size: 2rem; }
   h1 { font-size: 2rem; }
   .plain li { flex-direction: column; gap: 0; }
-  .refs { grid-template-columns: 1fr; }
 }
