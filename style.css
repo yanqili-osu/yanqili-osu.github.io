@@ -1,0 +1,165 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #22262b;
+  --muted: #646b73;
+  --accent: #8a2b2b;
+  --accent-soft: #f3e7e4;
+  --rule: #e2ded6;
+  --card: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181b;
+    --text: #e6e3dd;
+    --muted: #9aa0a7;
+    --accent: #e09a8f;
+    --accent-soft: #33221f;
+    --rule: #2d3035;
+    --card: #1d2024;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 1.075rem;
+  line-height: 1.65;
+}
+
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+/* Navigation */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+.topnav .wrap { display: flex; gap: 1.4rem; padding-top: 0.8rem; padding-bottom: 0.8rem; overflow-x: auto; }
+.topnav a { color: var(--text); text-decoration: none; white-space: nowrap; }
+.topnav a:hover { color: var(--accent); }
+
+/* Header */
+.hero {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  padding: 3rem 0 1.5rem;
+}
+.photo {
+  width: 9rem;
+  height: 9rem;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.initials {
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 2.6rem;
+  letter-spacing: 0.04em;
+}
+h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 0.35rem; font-weight: 600; }
+.role { margin: 0; color: var(--muted); }
+.market {
+  display: inline-block;
+  margin: 0.75rem 0 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+}
+.buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+.btn {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--text);
+  background: var(--card);
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn.primary:hover { opacity: 0.9; color: var(--bg); }
+
+/* Sections */
+section { padding: 0.5rem 0; }
+h2 {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.4rem;
+  margin: 2.25rem 0 1rem;
+}
+h3 { font-size: 1.12rem; line-height: 1.4; margin: 0 0 0.2rem; font-weight: 600; }
+.label { font-weight: 600; }
+.muted { color: var(--muted); }
+
+.plain { list-style: none; padding: 0; margin: 0; }
+.plain li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.2rem 0; }
+.when { color: var(--muted); white-space: nowrap; font-size: 0.95rem; }
+.what { font-weight: 600; }
+
+/* Papers */
+.paper { margin-bottom: 1.4rem; }
+.jmp {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.1rem 1.25rem;
+}
+.jmp p:last-child { margin-bottom: 0; }
+.authors { margin: 0; color: var(--muted); font-style: italic; }
+.links { margin: 0.2rem 0 0.6rem; font-family: Inter, system-ui, sans-serif; font-size: 0.88rem; }
+details { margin-top: 0.3rem; }
+summary {
+  cursor: pointer;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--accent);
+}
+details p { margin: 0.5rem 0 0; }
+
+.course { margin: 0 0 0.5rem; font-weight: 600; }
+.course .muted { font-weight: 400; }
+
+/* References */
+.refs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem 2rem; }
+.refs p { margin: 0; }
+.refs .name { font-weight: 600; }
+
+footer { padding: 3rem 1rem 2.5rem; color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 600px) {
+  body { font-size: 1rem; }
+  .hero { flex-direction: column; align-items: flex-start; gap: 1.1rem; padding-top: 2rem; }
+  .photo { width: 7rem; height: 7rem; }
+  .initials { font-size: 2rem; }
+  h1 { font-size: 2rem; }
+  .plain li { flex-direction: column; gap: 0; }
+  .refs { grid-template-columns: 1fr; }
+}
