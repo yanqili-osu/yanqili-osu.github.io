@@ -146,6 +146,7 @@ details p { margin: 0.5rem 0 0; }
 
 .course { margin: 0 0 0.5rem; font-weight: 600; }
 .course .muted { font-weight: 400; }
+.course-next { margin-top: 1.4rem; }
 
 
 footer { padding: 3rem 1rem 2.5rem; color: var(--muted); font-size: 0.85rem; }
